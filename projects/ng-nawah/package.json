@@ -1,0 +1,30 @@
+{
+	"name": "ng-nawah",
+	"description": "Nawah SDK for Angular",
+	"version": "1.0.0",
+	"license": "SEE LICENSE IN LICENSE",
+	"author": {
+		"name": "Mahmoud Abduljawad",
+		"email": "mahmoud@masaar.com",
+		"url": "https://masaar.com"
+	},
+	"homepage": "https://github.com/nawah-io/ng-nawah",
+	"bugs": "https://github.com/nawah-io/ng-nawah/issues",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/nawah-io/ng-nawah.git"
+	},
+	"keywords": [
+		"nawah",
+		"sdk",
+		"angular"
+	],
+	"peerDependencies": {
+		"@angular/common": ">=6.0.0",
+		"@angular/core": ">=6.0.0"
+	},
+	"dependencies": {
+		"jsrsasign": ">=8.0.12",
+		"ngx-cookie-service": ">=2.4.0"
+	}
+}

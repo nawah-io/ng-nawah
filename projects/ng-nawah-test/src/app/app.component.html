@@ -1,0 +1,21 @@
+<h1>NgNawah Test</h1>
+<div>
+	<h4>Init:</h4>
+	{{ nawah.inited | json }}
+</div>
+<div>
+	<h4>retryCount:</h4>
+	{{ retryCount | json }}
+</div>
+<div>
+	<h4>Session:</h4>
+	{{ nawah.session | json }}
+</div>
+<button (click)="init()">init()</button>
+<button (click)="auth()">auth()</button>
+<button (click)="signout()">signout()</button>
+<div>
+	<input type="file" multiple>
+	<button (click)="submit()">submit()</button>
+</div>
+<button (click)="createblogcat()">createblogcat()</button>

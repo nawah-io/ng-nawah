@@ -1,0 +1,15 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "alwaysStrict": true,
+    "outDir": "../../out-tsc/app",
+    "types": []
+  },
+  "files": [
+    "src/main.ts",
+    "src/polyfills.ts"
+  ],
+  "include": [
+    "projects/ng-nawah-test/src/**/*.d.ts"
+  ]
+}
