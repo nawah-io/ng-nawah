@@ -198,7 +198,7 @@ export class NawahService {
 		} catch { }
 	}
 
-	call(callArgs: callArgs): Observable<Res<Doc>> {
+	call<T extends Doc>(callArgs: callArgs): Observable<Res<T>> {
 
 		callArgs.sid = (this.authed) ? callArgs.sid || this.cache.get('sid') || 'f00000000000000000000012' : callArgs.sid || 'f00000000000000000000012';
 		callArgs.token = (this.authed) ? callArgs.token || this.cache.get('token') || this.config.anonToken : callArgs.token || this.config.anonToken;
@@ -300,11 +300,11 @@ export class NawahService {
 			}
 		}
 
-		let call = new Observable<Res<Doc>>(
+		let call = new Observable<Res<T>>(
 			(observer) => {
 				let observable = this.conn
 					.subscribe(
-						(res: Res<Doc>) => {
+						(res: Res<T>) => {
 							if (res.args && res.args.call_id == callArgs.call_id) {
 								this.log('log', 'message received from observer on call_id:', res, callArgs.call_id);
 								if (res.status == 200) {
