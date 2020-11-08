@@ -50,7 +50,7 @@ export interface QueryStep {
 		$attrs: Array<string>;
 	} | {
 		$skip: false | Array<string>;
-	} | Query | string | { [attr: string]: 1 | -1; } | number | false | Array<string> | {
+	} | Query | string | { [attr: string]: 1 | -1; } | number | boolean | Array<string> | {
 		val: [number, number];
 		attr: string;
 		dist: number;
