@@ -5,7 +5,7 @@ import { webSocket } from 'rxjs/webSocket';
 
 import * as rs from 'jsrsasign';
 
-import { SDKConfig, callArgs, Res, Doc, Session, Query } from './ng-nawah.models';
+import { SDKConfig, CallArgs, Res, Doc, Session, Query } from './ng-nawah.models';
 import { CacheService } from './cache.service';
 
 const JWS = rs.jws.JWS;
@@ -30,8 +30,8 @@ export class NawahService {
 	private heartbeat$: Subscription;
 
 	private queue: {
-		noAuth: Array<{ subject: Array<Observable<Res<Doc>>>; callArgs: callArgs; }>;
-		auth: Array<{ subject: Array<Observable<Res<Doc>>>; callArgs: callArgs; }>;
+		noAuth: Array<{ subject: Array<Observable<Res<Doc>>>; callArgs: CallArgs; }>;
+		auth: Array<{ subject: Array<Observable<Res<Doc>>>; callArgs: CallArgs; }>;
 	} = {
 			noAuth: new Array(),
 			auth: new Array()
@@ -198,7 +198,7 @@ export class NawahService {
 		} catch { }
 	}
 
-	call<T extends Doc>(callArgs: callArgs): Observable<Res<T>> {
+	call<T extends Doc>(callArgs: CallArgs): Observable<Res<T>> {
 
 		callArgs.sid = (this.authed) ? callArgs.sid || this.cache.get('sid') || 'f00000000000000000000012' : callArgs.sid || 'f00000000000000000000012';
 		callArgs.token = (this.authed) ? callArgs.token || this.cache.get('token') || this.config.anonToken : callArgs.token || this.config.anonToken;

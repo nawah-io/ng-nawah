@@ -45,6 +45,8 @@ export interface QueryStep {
 	} | {
 		$all: Array<any>;
 	} | {
+		$nin: Array<any>;
+	} | {
 		$in: Array<any>;
 	} | {
 		$attrs: Array<string>;
@@ -59,7 +61,7 @@ export interface QueryStep {
 
 export interface Query extends Array<QueryStep | Query> {}
 
-export interface callArgs {
+export interface CallArgs {
 	call_id?: string;
 	endpoint?: string;
 	sid?: string;

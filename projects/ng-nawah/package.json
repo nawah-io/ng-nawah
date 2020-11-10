@@ -1,7 +1,7 @@
 {
 	"name": "ng-nawah",
 	"description": "Nawah SDK for Angular",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"license": "SEE LICENSE IN LICENSE",
 	"author": {
 		"name": "Mahmoud Abduljawad",
@@ -24,8 +24,8 @@
 		"@angular/core": ">=6.0.0"
 	},
 	"dependencies": {
-		"jsrsasign": ">=8.0.12",
-    "ngx-cookie-service": ">=2.4.0",
-    "tslib": "^2.0.0"
+		"jsrsasign": ">=10.0.0",
+		"ngx-cookie-service": ">=10.1.0",
+		"tslib": "^2.0.0"
 	}
 }
